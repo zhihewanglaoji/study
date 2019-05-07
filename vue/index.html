@@ -1,0 +1,21 @@
+<html>
+<header></header>
+
+<script src="js/vue.js" type="text/javascript">
+
+</script>
+<body>
+<div id='app'>
+<input value="11" name='' type='text' v-model="username" />
+<p>hello {{username}}</p>
+</div>
+</body>	
+</html>
+<script>
+	const vm = new Vue({
+		el : "#app",
+		data :{
+			username :'atguigu',
+		}
+	})
+</script>

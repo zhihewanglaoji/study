@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue-app</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<div id="vue-app">
+		<h1>{{name}}</h1>
+		<p>{{job}}</p>
+		<p>{{greet('天使')}}</p>
+		<a v-bind:href="website">我的链接</a>
+		<p>{{website}}</p>
+		<input type="text" v-bind:value="name"/>
+		<p v-html="websiteTag">+</p>
+		<hr/>
+		<button v-on:click="plus"> - </button>
+		<div>{{age}}</div>
+		<button v-on:click="add"> + </button>
+		<hr/>
+		<h1>鼠标事件</h1>
+		<div class="canvas" v-on:mousemove="updateXY">
+		{{x}},{{y}}-<span v-on:mousemove.stop="">阻止事件冒泡</span></div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
